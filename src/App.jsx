@@ -48,7 +48,8 @@ const App = () => {
       <>
         <div className="outerDiv">
           <div className="inputDiv">
-            <ul>
+            
+            <ul className='inpChip'>
               {
                 inpNames.map((el,ind) => {
                   return (
@@ -59,26 +60,26 @@ const App = () => {
             
             </ul>
             <input type="text" ref={inputRef} name="autocomplete" placeholder='Write a name' onChange={e => setNameChange(e.target.value)} onFocus={e =>  setFocus(true)} />
-          </div>
-          {
-              focus ? (
-                  <div className="list">
-                    <ul> 
-                    {
-                        searchBox && searchBox.map((el,ind) => {
-                          return (
-                            <li key={el.id} onClick={e => addNames(el.id)}> <span className='avt'> <img src={`data:image/svg+xml;utf8,${encodeURIComponent(minidenticon(`${el.name}`))}`} alt="avatar" /></span> <span className='name'> {el.name} </span> &nbsp; <span className='email' > {el.email}</span></li>
-                          )
-                        })
-                      }
-                    
-                    </ul>
-                  </div>   
+            {
+                focus ? (
+                    <div className="list">
+                      <ul> 
+                      {
+                          searchBox && searchBox.map((el,ind) => {
+                            return (
+                              <li key={el.id} onClick={e => addNames(el.id)}> <span className='avt'> <img src={`data:image/svg+xml;utf8,${encodeURIComponent(minidenticon(`${el.name}`))}`} alt="avatar" /></span> <span className='name'> {el.name} </span> &nbsp; <span className='email' > {el.email}</span></li>
+                            )
+                          })
+                        }
+                      
+                      </ul>
+                    </div>   
 
-              ) : (
-                null
-              )
-          }
+                ) : (
+                  null
+                )
+            }
+          </div>
         </div>
       </>
     )  
