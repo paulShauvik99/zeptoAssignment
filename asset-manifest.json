@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.68ba4697.css",
-    "main.js": "/static/js/main.2796b946.js",
-    "index.html": "/index.html",
-    "main.68ba4697.css.map": "/static/css/main.68ba4697.css.map",
-    "main.2796b946.js.map": "/static/js/main.2796b946.js.map"
+    "main.css": "/zeptoAssignment/static/css/main.68ba4697.css",
+    "main.js": "/zeptoAssignment/static/js/main.2796b946.js",
+    "index.html": "/zeptoAssignment/index.html",
+    "main.68ba4697.css.map": "/zeptoAssignment/static/css/main.68ba4697.css.map",
+    "main.2796b946.js.map": "/zeptoAssignment/static/js/main.2796b946.js.map"
   },
   "entrypoints": [
     "static/css/main.68ba4697.css",
