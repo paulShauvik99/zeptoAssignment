@@ -8,8 +8,134 @@ html{
     font-size: 62.5%;
 }
 
+.outerDiv{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(222, 183, 183);
+    & .inputDiv{
+        min-height: 4rem;
+        position: relative;
+        width: 80rem;
+        background-color: #a5b9bf;
+        display: flex;
+        // align-items: center;
+        font-size: 1.6rem;
+        flex-wrap: wrap;    
+        padding: 12px;
+        gap: 1rem;
+        & .inpChip{
+            flex-wrap: wrap;
+            display: flex;
+            list-style-type:none;
+            gap: 1rem;
+            & li{
+                width: auto;
+                height: 2.5rem;
+                display: flex;
+                // justify-content: center;
+                align-items: center;
+                background-color:#E0DEE1;
+                padding: 1.5rem 0.2rem 1.5rem 0;
+                border-radius: 1.3rem;
+                & .avt{
+                    justify-self: flex-start;
+                    height :3rem;
+                    width:3rem;
+                    border-radius: 50%;
+                    background-color: white;
+                }
+                & .name{
+                    padding-left: 0.5rem;
+                }
+                & .closeBtn{
+                    cursor : pointer;
+                    justify-self: flex-end;
+                    border-radius: 50%;
+                    height: 2rem;
+                    width: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+        & input{
+            background-color: #a5b9bf;
+            padding: 12px;
+            height: 3.5rem;
+            width: 30rem;
+            font-size: 1.6rem;
+            border: none;
+            outline: none;
+            &:focus{
+                border-bottom: 1px solid springgreen;
+            }
+        }
+        & .list{
+            height: 35rem;
+            width: 50rem;
+            background-color: beige;
+            position: absolute;
+            top: 6.5rem;
+            left: 30rem;
+            overflow: auto;
+    
+            & ul{
+                // flex-wrap: wrap;    
+                // display: flex;
+                list-style-type:none;
+    
+                & li{
+                    cursor: pointer;
+                    width: auto;
+                    height:5.5rem;
+                    display: flex;
+                    gap: 2rem;
+                    padding-left: 2rem;
+                    font-size: 1.4rem;
+                    // justify-content: center;
+                    align-items: center;
+                    // background-color:#E0DEE1;
+                    & .avt{
+                        justify-self: flex-start;
+                        height :4rem;
+                        width:4rem;
+                        border-radius: 50%;
+                        background-color: white;
+                    }
+                    & .name{
+                        padding-left: 0.5rem;
+                    }
+                    & .email{
+                        font-size: 1.2rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+    
+                    &:hover{
+                        background-color: #e0e6e8c1;
+                    }
+    
+                }
+            }
+    
+    
+        }
+    }
 
-@media screen and (max-width: 767px){
+
+
+
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
     .outerDiv{
         height: 100vh;
         width: 100%;
@@ -133,5 +259,5 @@ html{
     
     
     }
-    
+
 }
