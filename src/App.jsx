@@ -4,18 +4,17 @@ import { minidenticon } from 'minidenticons'
 import data from './data';
 
 
-
-
-
 const App = () => {
 
     const inputRef = useRef()
+
+    //State Variables
     const [focus, setFocus] = useState(false)
     const [datas, setDatas] = useState(data)
     const [searchBox , setSearchBox] = useState(datas)
     const [inpNames,setInpNames] = useState([])
 
-
+    //Adding From List to Input Div
     const addNames = (ind) => {
       // console.log(ind)
       setInpNames(preState => [...preState,datas[datas.findIndex(e => e.id === ind)]])
@@ -25,6 +24,8 @@ const App = () => {
       inputRef.current.value = ''
     }
     
+
+    //Deleting from Input Div back to the List
     const delName = (ind) =>{
       // console.log(ind)
       setInpNames(inpNames.filter((el,index) =>  el.id !== ind))
@@ -33,14 +34,13 @@ const App = () => {
       inputRef.current.value = ''
     }
 
+    //Function for AutoComplete Functionality
     const setNameChange = (e) =>{
-
         let matches = datas.filter((el)=>{
             const reg = new RegExp(`${e}`,'gi')
             return el.name.match(reg)
         })
         setSearchBox(matches)
-
     }
 
 
